@@ -36,4 +36,34 @@ SECRET_KEY
 DATABASE_URI - for SQLAlchemy
 TEST_DATABASE_URI - for SQLAlchemy
 ENVIRONMENT - this is either production or development
-```                                                                                                                  
+```         
+
+
+## Launching the Program
+Run ```python run.py```. You may use [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) for Google Chrome to run the API.
+
+## API Endpoints
+
+| Resource URL | Methods | Description | Requires Token |
+| -------- | ------------- | --------- |--------------- |
+| `/api/v1` | GET  | The index | FALSE |
+| `/api/v1/auth/register` | POST  | User registration | FALSE |
+|  `/api/v1/auth/login` | POST | User login | FALSE |
+| `/api/v1/students` | GET, POST | View all students, add a student | TRUE |
+| `/api/v1/students/<string:id>` | GET, PUT, DELETE | View, edit, and delete a single student | TRUE |
+| `/api/v1/teachers` | GET, POST | View all teachers, add a teacher | TRUE |
+| `/api/v1/teachers/<string:id>` | GET, PUT, DELETE | View, edit, and delete a single teacher | TRUE |
+| `/api/v1/courses` | GET, POST | View all subjects, add a subject | TRUE |
+| `/api/v1/courses/<string:id>` | GET, PUT, DELETE | View, edit, and delete a single subject | TRUE |
+
+
+
+Registering and logging in to get a JWT token
+
+## Built With...
+* [Flask](http://flask.pocoo.org/)
+* [Flask-RESTX](http://flask-restful-cn.readthedocs.io/en/0.3.4/)
+* [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.1/)
+
+## Credits
+An AltSchool Africa 3rd semester project
